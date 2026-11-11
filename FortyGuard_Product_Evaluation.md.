@@ -7,3 +7,20 @@
 - Sidebar provides Create Heatmap, Find the Coolest Route, and Demo Heatmaps.
 - Selesious AI Agent promotional popup appeared.
 - Heatmap generation and other features are not yet tested.
+
+
+
+### First heatmap configuration
+
+- Shape selected: Circle
+- Area: 97.56 km²
+- Perimeter: 35.02 km
+- Granularity options: 100 × 100 m, 80 × 80 m, 60 × 60 m
+- First test granularity: 100 × 100 m
+- Available time frames: Single Hour, Range of Hours,
+  Single Day, Range of Days, Single Month
+- First test time frame: Single Day
+- Observation: Interface uses "Area of polygon" label
+  even when Circle is selected.
+- Generation: Not yet submitted
+
