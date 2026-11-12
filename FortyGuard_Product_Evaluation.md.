@@ -1,238 +1,244 @@
+# FortyGuard Product Evaluation
 
-### Dashboard: Initial inspection
+## 1. Temperature Dashboard Evaluation
 
-- Successfully logged into the dashboard.
+### 1.1 Initial Inspection
+
+- Successfully logged into the Temperature Dashboard.
 - Selected California during onboarding.
-- Map opened with California highlighted.
-- Sidebar provides Create Heatmap, Find the Coolest Route, and Demo Heatmaps.
-- Selesious AI Agent promotional popup appeared.
-- Heatmap generation and other features are not yet tested.
+- The map opened with California highlighted.
+- The sidebar provided three main options:
+  - Create Heatmap
+  - Find the Coolest Route
+  - Demo Heatmaps
+- A Selesious AI Agent promotional popup appeared.
 
+### 1.2 Heatmap Configuration
 
+The first heatmap was configured using the following options:
 
-### First heatmap configuration
+| Setting | Selected / Available Value |
+|---|---|
+| Location | San Francisco, California, USA |
+| Shape | Circle |
+| Selected area | 97.56 km² |
+| Perimeter | 35.02 km |
+| Available granularity | 100 × 100 m, 80 × 80 m, 60 × 60 m |
+| Selected granularity | 100 × 100 m |
+| Available time frames | Single Hour, Range of Hours, Single Day, Range of Days, Single Month |
+| Selected time frame | Single Day |
+| Date | November 10, 2026 |
 
-- Shape selected: Circle
-- Area: 97.56 km²
-- Perimeter: 35.02 km
-- Granularity options: 100 × 100 m, 80 × 80 m, 60 × 60 m
-- First test granularity: 100 × 100 m
-- Available time frames: Single Hour, Range of Hours,
-  Single Day, Range of Days, Single Month
-- First test time frame: Single Day
-- Observation: Interface uses "Area of polygon" label
-  even when Circle is selected.
-- Generation: Not yet submitted
+**Interface observation:** The configuration interface used the label "Area of polygon" even when Circle was selected. This could be clarified to make the terminology consistent with the selected shape.
 
+### 1.3 Heatmap Generation
 
+**Result: Successful**
 
+- Submitted the configured heatmap request.
+- The dashboard successfully generated the heatmap.
+- A coloured temperature grid appeared on the map.
+- No visible error was encountered.
+- Processing time was not recorded.
+- Task queue behaviour was not investigated.
 
-### First heatmap generation — Successful
+### 1.4 Heatmap Statistics and Information
 
-- Location: San Francisco, California, USA
-- Date: November 10, 2026
-- Shape: Circle
-- Selected area: 97.56 km²
-- Granularity: 100 × 100 m
-- Time frame: Single Day
-- Result: Heatmap generated successfully.
-- Visual output: Coloured temperature grid displayed on map.
-- Error: No visible error.
-- Processing time: Not recorded yet.
-- Task queue behaviour: Not investigated yet.
+The generated heatmap displayed the following statistics:
 
+| Metric | Observed Value |
+|---|---:|
+| Maximum temperature | 60.25°F |
+| Minimum temperature | 56.39°F |
+| Mean temperature | 58.75°F |
+| Standard deviation | 0.81 |
+| Temperature range | 3.86°F |
+| Total data points | 7,225 |
 
-
-### Heatmap Information — Observed
-
-Statistics:
-- Maximum: 60.25°F
-- Minimum: 56.39°F
-- Mean: 58.75°F
-- Standard deviation: 0.81
-- Temperature range: 3.86°F
-- Total data points: 7,225
-
-Visualizations:
+**Available visualizations:**
 - Bar graph
 - Normal distribution curve
 - Box plot
 
-Additional information:
+**Additional metadata:**
 - Heatmap type: Temperature Classification Map
 - Granularity: 100 × 100 m
 - Time frame: Single Day
 - Date: November 10, 2026
 - Time range: 12:00 AM–11:59 PM
-- Metadata includes a heatmap ID and creation timestamp.
-- Accuracy Index describes seven tiers.
+- Heatmap ID and creation timestamp were available.
+- The Accuracy Index described seven accuracy tiers.
 
-Questions to investigate:
+**Open questions:**
 - How are valid data points counted?
 - Why does the generated area differ slightly from the initial estimate?
 - Where is the assigned accuracy tier displayed?
-- Is standard deviation measured in °F?
+- Is standard deviation expressed in °F?
 
+These questions were not independently resolved during testing.
 
+### 1.5 Map Controls and Visualization
 
+The dashboard provided the following controls:
 
-### Map Controls — Observed
-
-Available controls:
-- Continuous and Classed color modes
-- Number of classes (currently 12)
-- Sequential, Diverging and Cyclic color schemes
-- Spectral color ramp
+- Continuous and Classed colour modes
+- Number of classes (12 in the tested configuration)
+- Sequential, Diverging and Cyclic colour schemes
+- Spectral colour ramp
 - Temperature legend in °F and °C
 - Individual temperature-range selection
 - Time Series Simulation
 - Heatmap and Polygon layers
-- Opacity control
+- Opacity adjustment
 - Download and Upload options
 
-Testing:
-- [ ] Compare Continuous and Classed
-- [ ] Test color schemes
-- [ ] Test temperature unit switching
-- [ ] Test individual legend ranges
-- [ ] Explore Time Series Simulation
-- [ ] Test layer visibility and opacity
+#### Continuous vs Classed Visualization
 
-
-
-### Continuous vs Classed comparison
-
-- Initially selected: Classed
-- Tested: Continuous
-- Observation: Classed mode displayed clearer distinctions
-  between temperature ranges.
+**Observed behaviour:**
+- Initially selected Classed mode.
+- Switched to Continuous mode for comparison.
+- Classed mode displayed clearer distinctions between temperature ranges.
 - Continuous mode displayed more gradual colour transitions.
-- Initial preference: Classed for identifying distinct
-  temperature zones.
 
+**Observation:** Classed mode was easier to interpret when identifying distinct temperature zones, while Continuous mode provided a more gradual representation of temperature variation.
 
-### Temperature Unit Switching
+#### Temperature Unit Switching
 
-- Tested Fahrenheit (°F) and Celsius (°C).
+**Tested:** Fahrenheit (°F) and Celsius (°C).
+
+**Observed behaviour:**
 - Temperature legend values updated according to the selected unit.
 - Heatmap colours remained consistent.
-- No visible change in spatial temperature distribution.
-- Observation: Unit switching provides consistent visualization
-  across both measurement systems.
-Feature: Temperature Legend Filtering
+- No visible change occurred in the spatial temperature distribution.
 
-Observed: Clicking “Unselect all” removes all temperature colours from the map. Selecting an individual temperature range displays only the areas corresponding to that range.
+**Result:** Unit switching worked as expected and provided consistent visualization across both measurement systems.
 
-Result: Worked as expected in my test.
+#### Temperature Legend Filtering
 
-User experience: Makes it easier to isolate and examine specific temperature ranges.
+**Observed behaviour:**
+- Clicking "Unselect all" removed all temperature colours from the map.
+- Selecting an individual temperature range displayed only the areas corresponding to that range.
 
-Feature: Temperature Legend Filtering
+**Result:** Worked as expected during testing.
 
-Observed: Clicking “Unselect all” removes all temperature colours from the map. Selecting an individual temperature range displays only the areas corresponding to that range.
+**Usability observation:** This feature makes it easier to isolate and examine specific temperature ranges.
 
-Result: Worked as expected in my test.
+#### Time Series Simulation
 
-User experience: Makes it easier to isolate and examine specific temperature ranges.
+**Result: Successful**
 
-
-
-eature: Time Series Simulation
-Worked in my test
-Observed:
+**Observed behaviour:**
 - Enabling the feature displayed playback controls.
 - A play button and timeline slider appeared.
 - Temperature colours changed during playback.
 - The displayed heatmap time progressed as the simulation ran.
-User experience: The feature provides an interactive way to explore temperature variations over time instead of viewing only a static heatmap
 
-Feature: Layers and Opacity
-Worked in my test
-Heatmap Layer
+**Usability observation:** The feature provides an interactive way to explore temperature variations over time instead of viewing only a static heatmap.
+
+#### Layers and Opacity
+
+**Heatmap Layer:**
 - Turning it off made the temperature map disappear.
 - Turning it on restored the temperature map.
-Polygon Layer
+
+**Polygon Layer:**
 - Turning it on displayed the circular study-area boundary.
 - Turning it off removed the boundary.
-Heatmap Opacity
+
+**Heatmap Opacity:**
 - Decreasing opacity made the heatmap less visually prominent.
-- Increasing opacity made the colours darker and more prominent.
-Overall impression: Layer visibility and opacity controls behaved intuitively and allowed independent control over map elements.
+- Increasing opacity made the colours more prominent.
 
-Environmental Parameters – Capture Workflow
-- Clicking Start a Capture prompts the user to select a tile.
-- The system waits for a map-tile selection before proceeding.
-- This makes the capture process location-specific.
+**Overall observation:** Layer visibility and opacity controls behaved intuitively and allowed independent control over map elements.
 
+### 1.6 Environmental Parameters
 
-Environmental Parameters – Tile Capture
-Successful
+#### Tile Capture Workflow
+
+**Result: Successful**
+
 Observed workflow:
-1. Clicked Start a Capture.
+
+1. Clicked "Start a Capture".
 2. Dashboard prompted me to select a map tile.
 3. Clicking the map dropped a pin.
 4. A success message appeared: "Tile Data Captured and added to gallery."
-Result: The selected tile's data was successfully captured and added to the gallery.
 
+**Result:** The selected tile's data was successfully captured and added to the gallery.
 
-Direct Temperature Measures
-Heat Index:
-59.72°F
+#### Direct Temperature Measures
 
-Range	Risk	Description
-<80.6°F	N/A	Heat Index is typically used in warm weather conditions to express the perceived heat.
-Relative Humidity:
-86.40%
+| Parameter | Observed Value |
+|---|---:|
+| Heat Index | 59.72°F |
+| Relative Humidity | 86.40% |
+| Wet Bulb Globe Temperature | 57.52°F |
 
-Range	Risk	Description
->81%	Very High	Severe discomfort, high risk of mold and heat stress
-Wet Bulb Globe:
-57.52°F
+The dashboard also displayed associated ranges, risk classifications, conditions, and recommendations.
 
-Range	Condition	Suggestions
-<82.1 °F	Good conditions	Normal activities • 3 separate 3 minute breaks each hour of training, OR a 10 minute break every 40 minutes
+For example:
+- Relative humidity above 81% was classified as Very High.
+- The displayed wet-bulb globe temperature condition was Good conditions.
 
-Temperature Dependent
-Precipitation
-0 mm/hr
-No Rain
-- Range: 0 mm/hr – 0 mm/hr
-- Description: No precipitation.
-- Result: The section currently displays one metric.
+#### Temperature-Dependent Parameters
 
+**Precipitation:**
 
-Air Quality – Observed Results
-Parameter	Measured value	Classification
-O₃ (Ozone)	19.12 µg/m³	Good
-SO₂ (Sulfur Dioxide)	0.65 µg/m³	Good
-NO₂ (Nitrogen Dioxide)	10.16 µg/m³	Good
+| Metric | Observed Value |
+|---|---:|
+| Precipitation | 0 mm/hr |
+| Displayed range | 0–0 mm/hr |
+| Classification | No Rain |
 
-Solar Irradiance – Observed Results
-Parameter	Value	Meaning
-GHI	306.95 W/m²	Total solar radiation on a horizontal surface
-DNI	573.58 W/m²	Direct solar radiation perpendicular to the sun's rays
-DHI	56.32 W/m²	Scattered solar radiation received on a horizontal surface
+**Observation:** The section displayed one precipitation metric during this test.
 
-Dashboard evaluation – progress
-We've now tested:
-- Heatmap generation and statistics
-- Colour modes and temperature filtering
-- Fahrenheit/Celsius conversion
+#### Air Quality
+
+| Parameter | Measured Value | Classification |
+|---|---:|---|
+| O₃ (Ozone) | 19.12 µg/m³ | Good |
+| SO₂ (Sulfur Dioxide) | 0.65 µg/m³ | Good |
+| NO₂ (Nitrogen Dioxide) | 10.16 µg/m³ | Good |
+
+#### Solar Irradiance
+
+| Parameter | Value | Meaning |
+|---|---:|---|
+| GHI | 306.95 W/m² | Total solar radiation on a horizontal surface |
+| DNI | 573.58 W/m² | Direct solar radiation perpendicular to the sun's rays |
+| DHI | 56.32 W/m² | Scattered solar radiation received on a horizontal surface |
+
+### 1.7 Dashboard Testing Summary
+
+The following features were explored successfully:
+
+- Heatmap generation and statistical summaries
+- Continuous and Classed visualization modes
+- Fahrenheit and Celsius switching
+- Temperature legend filtering
 - Time Series Simulation
-- Map layers and opacity
+- Heatmap and Polygon layer visibility
+- Opacity adjustment
 - Environmental tile capture and gallery
 - Direct Temperature Measures
-- Temperature Dependent metrics
+- Precipitation
 - Air Quality
 - Solar Irradiance
-Verified observation
-The heatmap endpoint successfully returned a GeoJSON FeatureCollection containing 66 polygon features for the requested San Francisco area. Each feature included a tile identifier and average, minimum, and maximum temperature values. The response also provided aggregated temperature statistics.
 
-Potential improvement to investigate: Explicitly documenting the units and calculation basis of each temperature statistic would make the response easier for developers to interpret.
+### 1.8 Dashboard Improvement Opportunities
 
+Based on the observations, the following improvements could make the dashboard more user-friendly:
 
-Data validation: The heatmap endpoint returned 66 GeoJSON features. All features contained the expected temperature properties, with no missing average-temperature values. An independent calculation of the mean temperature across all 66 features matched the API-provided mean, confirming consistency between the individual tile data and aggregated statistics.
-### Heatmap API – Functional and Data Validation
+1. Clarify analytical metrics by providing explanations of their units, calculation methods, and interpretation.
+2. Improve terminology consistency, particularly the area label when a circular shape is selected.
+3. Provide clearer guidance about the Accuracy Index and where users can find the assigned accuracy tier.
+4. Explain differences between initially estimated and generated area or perimeter values.
+
+---
+
+## 2. Temperature API Evaluation
+
+### 2.1 Heatmap API – Functional Testing
 
 **Test environment:** San Francisco, California, USA  
 **Granularity:** 100 metres  
@@ -240,12 +246,53 @@ Data validation: The heatmap endpoint returned 66 GeoJSON features. All features
 **Analytic type:** Temperature (`tcm`)
 
 **Observed results:**
-- Successfully submitted a heatmap generation request.
-- Received HTTP 200 and successfully retrieved the completed asynchronous task.
-- API returned a GeoJSON FeatureCollection containing 66 polygon features.
-- Each feature contained a tile ID and average, minimum, and maximum temperature properties.
-- No missing average-temperature values were found.
-- All individual tile temperature ranges satisfied minimum ≤ average ≤ maximum.
-- Independently calculated the mean temperature across all 66 tiles and confirmed that it matched the API-provided mean.
 
-**Conclusion:** All performed structural and numerical validation checks passed. The returned heatmap data was internally consistent for this test case.
+- Successfully submitted a heatmap generation request.
+- Received HTTP 200.
+- Successfully retrieved the completed asynchronous task.
+- The API returned a GeoJSON FeatureCollection containing 66 polygon features.
+- Each feature contained a tile identifier and average, minimum, and maximum temperature properties.
+- The response also included aggregated temperature statistics.
+
+### 2.2 API Response Validation
+
+A separate Python script was developed to inspect and validate the returned GeoJSON data.
+
+The validation covered:
+
+- Total number of returned features.
+- Presence of required temperature properties.
+- Missing average-temperature values.
+- Consistency of minimum, average, and maximum temperature values.
+- Independent calculation of the mean temperature.
+
+**Validation results:**
+
+| Validation Check | Result |
+|---|---|
+| Total features | 66 |
+| Required properties present | Passed |
+| Missing average temperatures | 0 |
+| Invalid temperature ranges | 0 |
+| Independent mean calculation | Passed |
+| Overall validation | Passed |
+
+All individual tile temperature ranges satisfied:
+
+`minimum ≤ average ≤ maximum`
+
+The independently calculated mean across all 66 tiles matched the API-provided mean.
+
+### 2.3 API Testing Conclusion
+
+All performed structural and numerical validation checks passed.
+
+The returned GeoJSON data was internally consistent for this test case. These checks verified the structure and numerical consistency of the response; they did not independently establish the real-world accuracy of the temperature measurements.
+
+### 2.4 API Documentation Improvement Opportunities
+
+During the evaluation, I identified areas where the developer documentation could be clearer:
+
+1. Explain response fields, temperature units, and the calculation basis of statistical values.
+2. Keep the Quickstart guide and individual endpoint examples consistent, particularly the polygon input structure.
+3. Provide additional examples of error responses, asynchronous task failures, and polling behaviour.
