@@ -135,3 +135,13 @@ Result: Worked as expected in my test.
 
 User experience: Makes it easier to isolate and examine specific temperature ranges.
 
+
+
+eature: Time Series Simulation
+Worked in my test
+Observed:
+- Enabling the feature displayed playback controls.
+- A play button and timeline slider appeared.
+- Temperature colours changed during playback.
+- The displayed heatmap time progressed as the simulation ran.
+User experience: The feature provides an interactive way to explore temperature variations over time instead of viewing only a static heatmap
