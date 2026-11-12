@@ -232,3 +232,20 @@ Potential improvement to investigate: Explicitly documenting the units and calcu
 
 
 Data validation: The heatmap endpoint returned 66 GeoJSON features. All features contained the expected temperature properties, with no missing average-temperature values. An independent calculation of the mean temperature across all 66 features matched the API-provided mean, confirming consistency between the individual tile data and aggregated statistics.
+### Heatmap API – Functional and Data Validation
+
+**Test environment:** San Francisco, California, USA  
+**Granularity:** 100 metres  
+**Date:** November 10, 2026  
+**Analytic type:** Temperature (`tcm`)
+
+**Observed results:**
+- Successfully submitted a heatmap generation request.
+- Received HTTP 200 and successfully retrieved the completed asynchronous task.
+- API returned a GeoJSON FeatureCollection containing 66 polygon features.
+- Each feature contained a tile ID and average, minimum, and maximum temperature properties.
+- No missing average-temperature values were found.
+- All individual tile temperature ranges satisfied minimum ≤ average ≤ maximum.
+- Independently calculated the mean temperature across all 66 tiles and confirmed that it matched the API-provided mean.
+
+**Conclusion:** All performed structural and numerical validation checks passed. The returned heatmap data was internally consistent for this test case.
