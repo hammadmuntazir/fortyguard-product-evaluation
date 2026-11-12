@@ -296,3 +296,96 @@ During the evaluation, I identified areas where the developer documentation coul
 1. Explain response fields, temperature units, and the calculation basis of statistical values.
 2. Keep the Quickstart guide and individual endpoint examples consistent, particularly the polygon input structure.
 3. Provide additional examples of error responses, asynchronous task failures, and polling behaviour.
+
+---
+
+## 3. FortyGuard Temperature MCP Evaluation
+
+### 3.1 Testing Environment
+
+**Tool used:** MCP Inspector CLI  
+**Server:** FortyGuard Temperature MCP  
+**Transport:** HTTP  
+**Authentication:** Bearer authentication  
+**Connection status:** Successful
+
+I used MCP Inspector CLI to connect to the remote FortyGuard MCP server and inspect its available tools.
+
+I chose the CLI approach for testing rather than integrating the server with an AI desktop client such as Claude Code, Cursor, or Codex.
+
+### 3.2 MCP Tool Discovery
+
+Successfully retrieved the live tool catalog using the `tools/list` method.
+
+The server exposed 11 tools:
+
+| No. | Tool Name |
+|---:|---|
+| 1 | `credit_balance` |
+| 2 | `env_params` |
+| 3 | `heatmap` |
+| 4 | `heatmap_read` |
+| 5 | `monitoring` |
+| 6 | `report` |
+| 7 | `report_read` |
+| 8 | `satellite` |
+| 9 | `streetview` |
+| 10 | `temperature_routing` |
+| 11 | `temperature_routing_read` |
+
+**Observation:** The live server exposed 11 tools, whereas the introductory documentation I reviewed referred to 9 tools.
+
+### 3.3 Read-Only Tool Execution
+
+Successfully executed the `credit_balance` tool.
+
+**Observed results:**
+
+- Tool execution completed successfully.
+- Returned status: `ok`.
+- Returned the available credit balance.
+- Reported latency of approximately 1.66 seconds.
+- Credit cost: 0.
+
+**Observation:** The tool returned a structured response and allowed me to verify that an MCP tool could be invoked successfully after establishing the connection.
+
+### 3.4 MCP Schema Validation
+
+Used MCP Inspector CLI with strict schema validation to inspect the available tool definitions.
+
+**Validation results:**
+
+| Validation Check | Result |
+|---|---|
+| Schema validation errors | 0 |
+| Schema validation warnings | 1 |
+| Tool associated with warning | `satellite` |
+| Affected parameter | `tiles` |
+
+**Warning details:**
+
+The `satellite` tool's `tiles` input schema contains an `anyOf` branch without a validation keyword. This means that branch does not adequately constrain the accepted input values.
+
+**Suggested improvement:** Define the intended input type and validation rules for the affected schema branch. For example, if it is intended to accept a free-form object, explicitly declare the object type and its permitted properties.
+
+**Observation:** The warning did not prevent tool discovery or establish a connection failure. It identifies an opportunity to improve schema clarity and input validation.
+
+### 3.5 MCP Testing Limitations
+
+The MCP evaluation was limited to:
+
+- Establishing a remote connection.
+- Verifying Bearer authentication.
+- Discovering the available tools.
+- Executing the read-only `credit_balance` tool.
+- Inspecting tool input schemas through strict validation.
+
+I did not execute credit-consuming MCP operations or test the server through a separate AI desktop client.
+
+### 3.6 MCP Evaluation Conclusion
+
+The remote MCP connection and authentication worked successfully. I was able to discover all 11 available tools, execute the read-only `credit_balance` tool, and inspect the tool schemas.
+
+Strict validation reported zero errors and one warning related to the `satellite` tool's `tiles` parameter.
+
+Further functional testing of individual tools and integration with AI clients would be useful for a more comprehensive evaluation.
