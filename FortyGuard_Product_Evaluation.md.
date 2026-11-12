@@ -97,3 +97,15 @@ Testing:
 - [ ] Test individual legend ranges
 - [ ] Explore Time Series Simulation
 - [ ] Test layer visibility and opacity
+
+
+
+### Continuous vs Classed comparison
+
+- Initially selected: Classed
+- Tested: Continuous
+- Observation: Classed mode displayed clearer distinctions
+  between temperature ranges.
+- Continuous mode displayed more gradual colour transitions.
+- Initial preference: Classed for identifying distinct
+  temperature zones.
