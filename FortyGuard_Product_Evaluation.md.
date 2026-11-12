@@ -229,3 +229,6 @@ Verified observation
 The heatmap endpoint successfully returned a GeoJSON FeatureCollection containing 66 polygon features for the requested San Francisco area. Each feature included a tile identifier and average, minimum, and maximum temperature values. The response also provided aggregated temperature statistics.
 
 Potential improvement to investigate: Explicitly documenting the units and calculation basis of each temperature statistic would make the response easier for developers to interpret.
+
+
+Data validation: The heatmap endpoint returned 66 GeoJSON features. All features contained the expected temperature properties, with no missing average-temperature values. An independent calculation of the mean temperature across all 66 features matched the API-provided mean, confirming consistency between the individual tile data and aggregated statistics.
