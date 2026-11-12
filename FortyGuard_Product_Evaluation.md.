@@ -212,3 +212,16 @@ Parameter	Value	Meaning
 GHI	306.95 W/m²	Total solar radiation on a horizontal surface
 DNI	573.58 W/m²	Direct solar radiation perpendicular to the sun's rays
 DHI	56.32 W/m²	Scattered solar radiation received on a horizontal surface
+
+Dashboard evaluation – progress
+We've now tested:
+- Heatmap generation and statistics
+- Colour modes and temperature filtering
+- Fahrenheit/Celsius conversion
+- Time Series Simulation
+- Map layers and opacity
+- Environmental tile capture and gallery
+- Direct Temperature Measures
+- Temperature Dependent metrics
+- Air Quality
+- Solar Irradiance
