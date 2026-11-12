@@ -41,3 +41,35 @@
 - Processing time: Not recorded yet.
 - Task queue behaviour: Not investigated yet.
 
+
+
+### Heatmap Information — Observed
+
+Statistics:
+- Maximum: 60.25°F
+- Minimum: 56.39°F
+- Mean: 58.75°F
+- Standard deviation: 0.81
+- Temperature range: 3.86°F
+- Total data points: 7,225
+
+Visualizations:
+- Bar graph
+- Normal distribution curve
+- Box plot
+
+Additional information:
+- Heatmap type: Temperature Classification Map
+- Granularity: 100 × 100 m
+- Time frame: Single Day
+- Date: November 10, 2026
+- Time range: 12:00 AM–11:59 PM
+- Metadata includes a heatmap ID and creation timestamp.
+- Accuracy Index describes seven tiers.
+
+Questions to investigate:
+- How are valid data points counted?
+- Why does the generated area differ slightly from the initial estimate?
+- Where is the assigned accuracy tier displayed?
+- Is standard deviation measured in °F?
+
