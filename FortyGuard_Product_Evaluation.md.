@@ -119,3 +119,10 @@ Testing:
 - No visible change in spatial temperature distribution.
 - Observation: Unit switching provides consistent visualization
   across both measurement systems.
+Feature: Temperature Legend Filtering
+
+Observed: Clicking “Unselect all” removes all temperature colours from the map. Selecting an individual temperature range displays only the areas corresponding to that range.
+
+Result: Worked as expected in my test.
+
+User experience: Makes it easier to isolate and examine specific temperature ranges.
