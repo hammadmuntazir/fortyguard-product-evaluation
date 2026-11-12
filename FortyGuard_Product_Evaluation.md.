@@ -24,3 +24,20 @@
   even when Circle is selected.
 - Generation: Not yet submitted
 
+
+
+
+### First heatmap generation — Successful
+
+- Location: San Francisco, California, USA
+- Date: November 10, 2026
+- Shape: Circle
+- Selected area: 97.56 km²
+- Granularity: 100 × 100 m
+- Time frame: Single Day
+- Result: Heatmap generated successfully.
+- Visual output: Coloured temperature grid displayed on map.
+- Error: No visible error.
+- Processing time: Not recorded yet.
+- Task queue behaviour: Not investigated yet.
+
