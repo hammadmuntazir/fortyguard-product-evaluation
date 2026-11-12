@@ -397,16 +397,16 @@ Further functional testing of individual tools and integration with AI clients w
 The following screenshots provide supporting evidence of the technical evaluation:
 
 ### API Validation
-`![API Validation](screenshots/api_validation.png)`
+![API Validation](screenshots/api_validation.png)
 
 Shows the Python validation results for the returned GeoJSON data.
 
 ### MCP Tool Discovery
-`![MCP Tool Discovery](screenshots/mcp_tools_list.png)`
+![MCP Tool Discovery](screenshots/mcp_tools_list.png)
 
 Shows the 11 tools discovered through MCP Inspector CLI.
 
 ### MCP Schema Validation
-`![MCP Schema Validation](screenshots/mcp_schema_validation.png)`
+![MCP Schema Validation](screenshots/mcp_schema_validation.png)
 
 Shows the strict schema validation summary, including zero errors and one warning.
