@@ -164,3 +164,12 @@ Environmental Parameters – Capture Workflow
 - The system waits for a map-tile selection before proceeding.
 - This makes the capture process location-specific.
 
+
+Environmental Parameters – Tile Capture
+Successful
+Observed workflow:
+1. Clicked Start a Capture.
+2. Dashboard prompted me to select a map tile.
+3. Clicking the map dropped a pin.
+4. A success message appeared: "Tile Data Captured and added to gallery."
+Result: The selected tile's data was successfully captured and added to the gallery.
