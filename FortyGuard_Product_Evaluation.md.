@@ -109,3 +109,13 @@ Testing:
 - Continuous mode displayed more gradual colour transitions.
 - Initial preference: Classed for identifying distinct
   temperature zones.
+
+
+### Temperature Unit Switching
+
+- Tested Fahrenheit (°F) and Celsius (°C).
+- Temperature legend values updated according to the selected unit.
+- Heatmap colours remained consistent.
+- No visible change in spatial temperature distribution.
+- Observation: Unit switching provides consistent visualization
+  across both measurement systems.
