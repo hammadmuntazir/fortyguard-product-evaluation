@@ -173,3 +173,21 @@ Observed workflow:
 3. Clicking the map dropped a pin.
 4. A success message appeared: "Tile Data Captured and added to gallery."
 Result: The selected tile's data was successfully captured and added to the gallery.
+
+
+Direct Temperature Measures
+Heat Index:
+59.72°F
+
+Range	Risk	Description
+<80.6°F	N/A	Heat Index is typically used in warm weather conditions to express the perceived heat.
+Relative Humidity:
+86.40%
+
+Range	Risk	Description
+>81%	Very High	Severe discomfort, high risk of mold and heat stress
+Wet Bulb Globe:
+57.52°F
+
+Range	Condition	Suggestions
+<82.1 °F	Good conditions	Normal activities • 3 separate 3 minute breaks each hour of training, OR a 10 minute break every 40 minutes
