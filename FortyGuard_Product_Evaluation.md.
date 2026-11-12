@@ -191,3 +191,11 @@ Wet Bulb Globe:
 
 Range	Condition	Suggestions
 <82.1 °F	Good conditions	Normal activities • 3 separate 3 minute breaks each hour of training, OR a 10 minute break every 40 minutes
+
+Temperature Dependent
+Precipitation
+0 mm/hr
+No Rain
+- Range: 0 mm/hr – 0 mm/hr
+- Description: No precipitation.
+- Result: The section currently displays one metric.
