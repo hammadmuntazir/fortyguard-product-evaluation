@@ -206,3 +206,9 @@ Parameter	Measured value	Classification
 O₃ (Ozone)	19.12 µg/m³	Good
 SO₂ (Sulfur Dioxide)	0.65 µg/m³	Good
 NO₂ (Nitrogen Dioxide)	10.16 µg/m³	Good
+
+Solar Irradiance – Observed Results
+Parameter	Value	Meaning
+GHI	306.95 W/m²	Total solar radiation on a horizontal surface
+DNI	573.58 W/m²	Direct solar radiation perpendicular to the sun's rays
+DHI	56.32 W/m²	Scattered solar radiation received on a horizontal surface
