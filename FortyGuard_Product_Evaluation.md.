@@ -389,3 +389,24 @@ The remote MCP connection and authentication worked successfully. I was able to 
 Strict validation reported zero errors and one warning related to the `satellite` tool's `tiles` parameter.
 
 Further functional testing of individual tools and integration with AI clients would be useful for a more comprehensive evaluation.
+
+---
+
+## 4. Supporting Evidence
+
+The following screenshots provide supporting evidence of the technical evaluation:
+
+### API Validation
+`![API Validation](screenshots/api-validation.png)`
+
+Shows the Python validation results for the returned GeoJSON data.
+
+### MCP Tool Discovery
+`![MCP Tool Discovery](screenshots/mcp-tools-list.png)`
+
+Shows the 11 tools discovered through MCP Inspector CLI.
+
+### MCP Schema Validation
+`![MCP Schema Validation](screenshots/mcp-schema-validation.png)`
+
+Shows the strict schema validation summary, including zero errors and one warning.
