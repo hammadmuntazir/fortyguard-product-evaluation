@@ -73,3 +73,27 @@ Questions to investigate:
 - Where is the assigned accuracy tier displayed?
 - Is standard deviation measured in °F?
 
+
+
+
+### Map Controls — Observed
+
+Available controls:
+- Continuous and Classed color modes
+- Number of classes (currently 12)
+- Sequential, Diverging and Cyclic color schemes
+- Spectral color ramp
+- Temperature legend in °F and °C
+- Individual temperature-range selection
+- Time Series Simulation
+- Heatmap and Polygon layers
+- Opacity control
+- Download and Upload options
+
+Testing:
+- [ ] Compare Continuous and Classed
+- [ ] Test color schemes
+- [ ] Test temperature unit switching
+- [ ] Test individual legend ranges
+- [ ] Explore Time Series Simulation
+- [ ] Test layer visibility and opacity
