@@ -158,3 +158,9 @@ Heatmap Opacity
 - Decreasing opacity made the heatmap less visually prominent.
 - Increasing opacity made the colours darker and more prominent.
 Overall impression: Layer visibility and opacity controls behaved intuitively and allowed independent control over map elements.
+
+Environmental Parameters – Capture Workflow
+- Clicking Start a Capture prompts the user to select a tile.
+- The system waits for a map-tile selection before proceeding.
+- This makes the capture process location-specific.
+
