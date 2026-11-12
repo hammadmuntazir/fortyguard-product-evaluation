@@ -145,3 +145,16 @@ Observed:
 - Temperature colours changed during playback.
 - The displayed heatmap time progressed as the simulation ran.
 User experience: The feature provides an interactive way to explore temperature variations over time instead of viewing only a static heatmap
+
+Feature: Layers and Opacity
+Worked in my test
+Heatmap Layer
+- Turning it off made the temperature map disappear.
+- Turning it on restored the temperature map.
+Polygon Layer
+- Turning it on displayed the circular study-area boundary.
+- Turning it off removed the boundary.
+Heatmap Opacity
+- Decreasing opacity made the heatmap less visually prominent.
+- Increasing opacity made the colours darker and more prominent.
+Overall impression: Layer visibility and opacity controls behaved intuitively and allowed independent control over map elements.
